@@ -19,20 +19,14 @@
 <body onload="initCanvas();">
 <div id = "container">
     <div id="title">Prim</div>
-    <div id="head">
-        <p>
-            <input id="insert" type="button" value="Insertion Sort" onclick="Insert();">
-            <input id="select" type="button" value="Selection Sort" onclick="Select();">
-            <input id="bubble" type="button" value="Bubble Sort" onclick="Bubble();">
-        </p>
-    </div>
     <div id="mid">
         <canvas id="myCanvas" width="850" height="500">Do not support canvas !</canvas>
     </div>
     <div id="foot">
-        <input id="random" type="button" value="Randomize Array" onclick="Randomize()">
+        <b>Start Point</b>
+        <input id="startbox" type="text">
         <input id="start_pause" type="button" value="Start" onclick="Start_Pause();">
-        <input id="next" type="button" value="Next" onclick="Next();">
+        <input id="random" type="button" value="New Graph" onclick="Randomize()">
         &nbsp;&nbsp;&nbsp;<b> [ Speed ] </b> &nbsp; MIN
         <input id="range_speed" type="range" name="range_speed" value="50" oninput="changeSpeed()">MAX
 

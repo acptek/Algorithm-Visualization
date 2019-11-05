@@ -13,9 +13,12 @@
     <style type="text/css">
         canvas{border:#ccc solid 1px;}
     </style>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <canvas id="myCanvas" width="850" height="500"></canvas>
+<h1>Hello, world!</h1>
+<script src="https://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
 
     // function Node() {
@@ -29,27 +32,27 @@
     // Node.prototype.constructor = Node;
 
     //生成图的n个顶点坐标
-    function polygon(n,x,y,r,angle,counterclockwise){
-        var angle = angle || 0;
-        var counterclockwise = counterclockwise || false;
-        let arr = new Array();
-        let posx = x + r*Math.sin(angle), posy = y - r*Math.cos(angle);
-        let delta = 2*Math.PI/n;
-        for(let i=0;i<n;i++){
-            angle += counterclockwise ? -delta : delta;
-            posx = x + r*Math.sin(angle), posy = y - r*Math.cos(angle);
-            arr[i]= new Circle();
-            arr[i].Inite(posx, posy, 20);
-        }
-        return arr;
-    }
-
-
-    var canvas = document.getElementById('myCanvas');
-    var c = canvas.getContext("2d");
-    c.beginPath();
-    let xx = polygon(5,600,250,200);
-    console.log(xx);
+    // function polygon(n,x,y,r,angle,counterclockwise){
+    //     var angle = angle || 0;
+    //     var counterclockwise = counterclockwise || false;
+    //     let arr = new Array();
+    //     let posx = x + r*Math.sin(angle), posy = y - r*Math.cos(angle);
+    //     let delta = 2*Math.PI/n;
+    //     for(let i=0;i<n;i++){
+    //         angle += counterclockwise ? -delta : delta;
+    //         posx = x + r*Math.sin(angle), posy = y - r*Math.cos(angle);
+    //         arr[i]= new Circle();
+    //         arr[i].Inite(posx, posy, 20);
+    //     }
+    //     return arr;
+    // }
+    //
+    //
+    // var canvas = document.getElementById('myCanvas');
+    // var c = canvas.getContext("2d");
+    // c.beginPath();
+    // let xx = polygon(5,600,250,200);
+    // console.log(xx);
     //c.fillStyle = '#f00';
     //c.fill();
 
